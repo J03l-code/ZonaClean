@@ -53,11 +53,11 @@ h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:800;line-height:1.05}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
 
 /* ─── HEADER ─── */
-.site-header{position:fixed;top:0;left:0;width:100%;z-index:500;padding:35px 0;transition:padding .4s var(--ease),background .4s var(--ease)}
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:500;padding:45px 0;transition:padding .4s var(--ease),background .4s var(--ease)}
 .site-header.scrolled{padding:14px 0;background:rgba(6,7,26,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--c-border)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
-.logo img{height:clamp(90px, 13vw, 130px);width:auto;transition:all .4s var(--ease);filter:drop-shadow(0 0 10px rgba(0,210,255,0.2))}
-.site-header.scrolled .logo img{height:clamp(55px, 7vw, 70px)}
+.logo img{height:clamp(120px, 20vw, 200px);width:auto;transition:all .4s var(--ease);filter:drop-shadow(0 0 10px rgba(0,210,255,0.2))}
+.site-header.scrolled .logo img{height:clamp(65px, 10vw, 85px)}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-link{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);transition:color .2s;position:relative;padding-bottom:2px}
 .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--c-accent);transition:width .3s var(--ease)}
