@@ -202,8 +202,9 @@ textarea.form-control{resize:vertical;min-height:110px}
 
 /* ─── FOOTER ─── */
 .site-footer{background:var(--c-primary);padding:clamp(4rem,8vw,6rem) 0 2rem}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.footer-logo{height:clamp(70px, 9vw, 100px);margin-bottom:2rem;filter:drop-shadow(0 0 15px rgba(255,255,255,0.1))}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(2rem, 5vw, 4rem);margin-bottom:4rem}
+.footer-logo{height:clamp(90px, 15vw, 160px);width:auto;margin-bottom:2.5rem;filter:drop-shadow(0 0 25px rgba(255,255,255,0.15));transition:transform .3s var(--ease)}
+.footer-logo:hover{transform:scale(1.02)}
 .footer-desc{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:1.5rem}
 .footer-heading{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem;font-weight:500}
 .footer-links li{margin-bottom:.65rem}
