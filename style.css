@@ -53,11 +53,11 @@ h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:800;line-height:1.05}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
 
 /* ─── HEADER ─── */
-.site-header{position:fixed;top:0;left:0;width:100%;z-index:500;padding:45px 0;transition:padding .4s var(--ease),background .4s var(--ease)}
-.site-header.scrolled{padding:14px 0;background:rgba(6,7,26,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--c-border)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
-.logo img{height:clamp(100px, 15vw, 155px);width:auto;transition:all .4s var(--ease);filter:drop-shadow(0 0 10px rgba(0,210,255,0.2))}
-.site-header.scrolled .logo img{height:clamp(85px, 12vw, 105px)}
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:500;padding:clamp(14px,4vw,45px) 0;transition:padding .4s var(--ease),background .4s var(--ease)}
+.site-header.scrolled{padding:10px 0;background:rgba(6,7,26,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--c-border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo img{height:clamp(44px, 8vw, 155px);width:auto;transition:all .4s var(--ease);filter:drop-shadow(0 0 10px rgba(0,210,255,0.2))}
+.site-header.scrolled .logo img{height:clamp(38px, 6vw, 105px)}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-link{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);transition:color .2s;position:relative;padding-bottom:2px}
 .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--c-accent);transition:width .3s var(--ease)}
@@ -103,11 +103,11 @@ h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:800;line-height:1.05}
 
 /* ─── STATS ─── */
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--c-border);border-radius:16px;overflow:hidden}
-.stat-item{padding:clamp(2rem,4vw,3.5rem) clamp(1.5rem,3vw,2.5rem);border-right:1px solid var(--c-border);position:relative}
+.stat-item{padding:clamp(1.25rem,3vw,3.5rem) clamp(1rem,2vw,2.5rem);border-right:1px solid var(--c-border);position:relative}
 .stat-item:last-child{border-right:none}
-.stat-num{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:800;color:var(--c-white);line-height:1;margin-bottom:.5rem}
+.stat-num{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,4.5rem);font-weight:800;color:var(--c-white);line-height:1;margin-bottom:.4rem;white-space:nowrap}
 .stat-num span{color:var(--c-accent)}
-.stat-label{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted)}
+.stat-label{font-family:var(--font-mono);font-size:clamp(.6rem,.9vw,.78rem);letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);line-height:1.3}
 
 /* ─── SERVICE ITEMS ─── */
 .service-list-items{display:flex;flex-direction:column}
@@ -244,17 +244,39 @@ textarea.form-control{resize:vertical;min-height:110px}
 @media(max-width:768px){
   .hamburger{display:flex}
   .nav-links{display:none}
+  /* Logo mobile: compact so header fits in one row */
+  .logo img{height:44px !important}
+  .site-header.scrolled .logo img{height:38px !important}
+  .site-header{padding:12px 0 !important}
+  .site-header.scrolled{padding:8px 0 !important}
+  /* Stats: 2 columns on tablet */
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item{border-bottom:1px solid var(--c-border);border-right:none}
+  .stat-item:nth-child(odd){border-right:1px solid var(--c-border)}
   .grid2,.grid3,.contact-grid{grid-template-columns:1fr}
   .hero-right{position:static;text-align:left;max-width:100%;margin-top:2rem}
   .form-row{grid-template-columns:1fr}
   .gallery-masonry{columns:2}
   .cta-inner{flex-direction:column;text-align:center}
   .footer-grid{grid-template-columns:1fr}
+  /* Footer logo: big on mobile since it's stacked */
+  .footer-logo{height:clamp(80px,25vw,130px) !important}
+  /* Prevent horizontal overflow */
+  .display{font-size:clamp(3rem,12vw,9.5rem)}
+  section,.hero{overflow-x:hidden}
 }
 @media(max-width:480px){
+  /* Stats: still 2 columns, but numbers smaller */
   .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-num{font-size:clamp(1.4rem,8vw,2rem)}
+  .stat-label{font-size:.6rem;letter-spacing:.05em}
   .process-steps{grid-template-columns:1fr}
   .gallery-masonry{columns:1}
+  /* Hero display title */
+  .display{font-size:clamp(2.5rem,11vw,9.5rem);letter-spacing:-0.02em}
+  /* Buttons side by side */
+  .hero-actions{flex-wrap:wrap;gap:.75rem}
+  .btn{padding:12px 20px;font-size:.8rem}
 }
 
 /* Divider shape */
