@@ -128,7 +128,7 @@ h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:800;line-height:1.05;
 .feature-card{padding:2rem;border:1px solid var(--c-border);border-radius:var(--r-lg,16px);transition:all .35s var(--ease);background:var(--c-bg2)}
 .feature-card:hover{border-color:rgba(0,210,255,.25);transform:translateY(-6px);background:rgba(0,210,255,.04)}
 .feature-icon{width:52px;height:52px;border-radius:12px;background:rgba(0,210,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;color:var(--c-accent)}
-.feature-title{font-size:1.2rem;margin-bottom:.75rem;color:var(--c-white)}
+.feature-title{font-size:1.2rem;margin-bottom:.75rem;color:var(--c-white) !important}
 .feature-text{font-size:.9rem;color:var(--c-muted);line-height:1.7}
 
 /* ─── PROCESS ─── */
@@ -274,7 +274,7 @@ textarea.form-control{resize:vertical;min-height:110px}
   .gallery-masonry{columns:1}
   /* Hero display title */
   .display{font-size:clamp(2rem,11vw,9.5rem);letter-spacing:-0.02em}
-  .section-title{font-size:clamp(1.4rem,8vw,2.5rem);letter-spacing:-0.01em}
+  .section-title{font-size:clamp(1.3rem,7vw,2.5rem);letter-spacing:-0.01em;word-break:break-word}
   /* Buttons side by side */
   .hero-actions{flex-wrap:wrap;gap:.75rem}
   .btn{padding:12px 20px;font-size:.8rem}
