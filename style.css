@@ -220,6 +220,10 @@ textarea.form-control{resize:vertical;min-height:110px}
 .social-btn:hover{border-color:var(--c-accent);color:var(--c-accent);transform:translateY(-2px)}
 .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .footer-copy{color:rgba(255,255,255,.35);font-size:.8rem}
+.designer-link{color:var(--c-accent);font-weight:600;text-decoration:none;transition:all .3s var(--ease);position:relative}
+.designer-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:var(--c-accent);transition:width .3s var(--ease)}
+.designer-link:hover{color:var(--c-white);text-shadow:0 0 10px rgba(0,210,255,0.4)}
+.designer-link:hover::after{width:100%}
 
 /* ─── WA FLOAT ─── */
 .wa-float{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;z-index:300;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .3s var(--ease),box-shadow .3s}
@@ -272,7 +276,7 @@ textarea.form-control{resize:vertical;min-height:110px}
   /* Footer logo: big on mobile since it's stacked */
   .footer-logo{height:clamp(80px,25vw,130px) !important}
   /* Prevent horizontal overflow */
-  .display{font-size:clamp(3rem,12vw,9.5rem)}
+  .display{font-size:clamp(1.8rem,10vw,9.5rem);word-break:keep-all;overflow-wrap:normal}
   section,.hero{overflow-x:hidden}
 }
 @media(max-width:480px){
