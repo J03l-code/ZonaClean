@@ -245,10 +245,10 @@ textarea.form-control{resize:vertical;min-height:110px}
   .hamburger{display:flex}
   .nav-links{display:none}
   /* Logo mobile: compact so header fits in one row */
-  .logo img{height:52px !important}
-  .site-header.scrolled .logo img{height:46px !important}
-  .site-header{padding:10px 0 !important}
-  .site-header.scrolled{padding:6px 0 !important}
+  .logo img{height:65px !important}
+  .site-header.scrolled .logo img{height:58px !important}
+  .site-header{padding:8px 0 !important}
+  .site-header.scrolled{padding:4px 0 !important}
   /* Stats: 2 columns on tablet */
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat-item{border-bottom:1px solid var(--c-border);border-right:none}
