@@ -169,7 +169,7 @@ h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:800;line-height:1.05;
 .ba-after{background:linear-gradient(135deg,var(--c-secondary),var(--c-teal));clip-path:inset(0 50% 0 0)}
 .ba-handle{position:absolute;top:0;left:50%;transform:translateX(-50%);height:100%;width:3px;background:var(--c-white);z-index:10;cursor:ew-resize}
 .ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:var(--c-white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.3)}
-.ba-label{position:absolute;top:16px;padding:5px 14px;border-radius:100px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);color:var(--c-white);font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;pointer-events:none;z-index:11}
+.ba-label{position:absolute;top:16px;padding:5px 14px;border-radius:100px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);color:var(--c-white);font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;pointer-events:none;z-index:11;transition:opacity .3s var(--ease)}
 .ba-label-before{right:16px}.ba-label-after{left:16px}
 
 /* ─── GALLERY GRID ─── */

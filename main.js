@@ -124,6 +124,10 @@ function initSlider(containerId) {
     const pct = (x / rect.width) * 100;
     handle.style.left = pct + '%';
     afterEl.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+    const labelBefore = container.querySelector('.ba-label-before');
+    const labelAfter  = container.querySelector('.ba-label-after');
+    if (labelBefore) labelBefore.style.opacity = pct > 20 ? '0' : '1';
+    if (labelAfter)  labelAfter.style.opacity  = pct < 80 ? '0' : '1';
   }
 
   // Mouse
