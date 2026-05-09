@@ -35,7 +35,7 @@ body.cursor-grow #cursor-ring{width:56px;height:56px;opacity:.4}
 
 /* ─── TYPOGRAPHY ─── */
 h1,h2,h3,h4,h5{font-family:var(--font-display);font-weight:800;line-height:1.05;overflow-wrap:break-word;word-wrap:break-word}
-.display{font-size:clamp(4rem,9vw,9.5rem);letter-spacing:-0.03em;text-transform:uppercase;line-height:.93;overflow-wrap:break-word;word-wrap:break-word}
+.display{font-size:clamp(2.5rem,7.5vw,7.2rem);letter-spacing:-0.04em;text-transform:uppercase;line-height:.93;overflow-wrap:normal;word-break:keep-all}
 .section-label{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c-accent);font-weight:500}
 .section-title{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05}
 .lead{font-size:clamp(1rem,1.8vw,1.25rem);color:var(--c-muted);line-height:1.7}
@@ -276,7 +276,7 @@ textarea.form-control{resize:vertical;min-height:110px}
   /* Footer logo: big on mobile since it's stacked */
   .footer-logo{height:clamp(80px,25vw,130px) !important}
   /* Prevent horizontal overflow */
-  .display{font-size:clamp(1.8rem,10vw,9.5rem);word-break:keep-all;overflow-wrap:normal}
+  .display{font-size:clamp(1.5rem,8.5vw,4rem);word-break:keep-all;overflow-wrap:normal;letter-spacing:-0.05em}
   section,.hero{overflow-x:hidden}
 }
 @media(max-width:480px){
@@ -286,8 +286,7 @@ textarea.form-control{resize:vertical;min-height:110px}
   .stat-label{font-size:.6rem;letter-spacing:.05em}
   .process-steps{grid-template-columns:1fr}
   .gallery-masonry{columns:1}
-  /* Hero display title */
-  .display{font-size:clamp(2rem,11vw,9.5rem);letter-spacing:-0.02em}
+
   .section-title{font-size:clamp(1.3rem,7vw,2.5rem);letter-spacing:-0.01em;word-break:break-word}
   /* Buttons side by side */
   .hero-actions{flex-wrap:wrap;gap:.75rem}
